@@ -293,7 +293,7 @@ initSliders();
   /* Build the image path array [Foto1.png … Foto30.png] */
   var allPhotos = [];
   for(var i = 1; i <= TOTAL; i++){
-    allPhotos.push('Fotot_Slider/Foto' + i + '.png');
+    allPhotos.push('Fotot_Slider/Foto' + i + '.PNG');
   }
 
   /* Shuffle helper — Fisher-Yates */
