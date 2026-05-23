@@ -217,21 +217,81 @@ var sendPopup=document.getElementById('send-popup');
 var spPreview=document.getElementById('sp-preview');
 var pendingMsg='';
 
+function showValidationPopup(message){
+  var existing=document.getElementById('validation-popup');
+  if(existing) existing.remove();
+
+  var overlay=document.createElement('div');
+  overlay.id='validation-popup';
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center;animation:vp-fade-in .2s ease';
+
+  var box=document.createElement('div');
+  box.style.cssText='background:var(--card,#1a1a1a);color:var(--fg,#fff);border:1px solid var(--gold,#c9a84c);border-radius:16px;padding:2rem 2.2rem;max-width:340px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.5);animation:vp-slide-in .25s ease';
+
+  var icon=document.createElement('div');
+  icon.textContent='⚠️';
+  icon.style.cssText='font-size:2.2rem;margin-bottom:.75rem';
+
+  var title=document.createElement('div');
+  title.style.cssText='font-size:1.1rem;font-weight:600;margin-bottom:.5rem;color:var(--gold,#c9a84c)';
+  title.textContent=lang==='sq'?'Forma e paplotësuar':'Incomplete Form';
+
+  var text=document.createElement('div');
+  text.style.cssText='font-size:.92rem;line-height:1.5;opacity:.88;margin-bottom:1.4rem';
+  text.textContent=message;
+
+  var btn=document.createElement('button');
+  btn.textContent=lang==='sq'?'Kthehu & Plotëso':'Go Back & Fill';
+  btn.style.cssText='background:var(--gold,#c9a84c);color:#000;border:none;border-radius:8px;padding:.65rem 1.6rem;font-size:.95rem;font-weight:600;cursor:pointer;transition:opacity .2s';
+  btn.onmouseenter=function(){btn.style.opacity='.85'};
+  btn.onmouseleave=function(){btn.style.opacity='1'};
+  btn.onclick=function(){ overlay.remove(); };
+
+  /* Close on overlay click */
+  overlay.onclick=function(e){ if(e.target===overlay) overlay.remove(); };
+
+  /* Inject keyframes once */
+  if(!document.getElementById('vp-style')){
+    var st=document.createElement('style');
+    st.id='vp-style';
+    st.textContent='@keyframes vp-fade-in{from{opacity:0}to{opacity:1}}@keyframes vp-slide-in{from{transform:translateY(-18px);opacity:0}to{transform:translateY(0);opacity:1}}';
+    document.head.appendChild(st);
+  }
+
+  box.appendChild(icon);
+  box.appendChild(title);
+  box.appendChild(text);
+  box.appendChild(btn);
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+}
+
 function buildMessage(){
   var name=(document.getElementById('cf-name').value||'').trim();
   var surname=(document.getElementById('cf-surname').value||'').trim();
   var phone=(document.getElementById('cf-phone').value||'').trim();
   var contact=(document.getElementById('cf-contact').value||'').trim();
   var msg=(document.getElementById('cf-msg').value||'').trim();
-  if(!name&&!msg){
-    alert(lang==='sq'?'Ju lutem plotësoni të paktën emrin dhe mesazhin.':'Please fill in at least your name and message.');
+
+  var missing=[];
+  if(!name)    missing.push(lang==='sq'?'Emri':'First name');
+  if(!surname) missing.push(lang==='sq'?'Mbiemri':'Last name');
+  if(!phone)   missing.push(lang==='sq'?'Nr. Telefoni':'Phone number');
+  if(!msg)     missing.push(lang==='sq'?'Mesazhi':'Message');
+
+  if(missing.length){
+    var intro=lang==='sq'
+      ?'Ju lutem plotësoni fushat e mëposhtme të detyrueshme:'
+      :'Please fill in the following required fields:';
+    showValidationPopup(intro+'\n• '+missing.join('\n• '));
     return null;
   }
+
   var full=[];
-  if(name||surname) full.push('Emri: '+(name+' '+surname).trim());
-  if(phone)         full.push('Telefoni: '+phone);
-  if(contact)       full.push('Email: '+contact);
-  if(msg)           full.push('Mesazhi: '+msg);
+  full.push('Emri: '+(name+' '+surname).trim());
+  full.push('Telefoni: '+phone);
+  if(contact) full.push('Email: '+contact);
+  full.push('Mesazhi: '+msg);
   return full.join('\n');
 }
 
