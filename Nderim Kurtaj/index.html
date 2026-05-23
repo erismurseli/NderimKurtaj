@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="sq" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nderim Kurtaj — Fotograf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<header id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <img src="Fotot_Kryesore/logo.jpg" alt="Nderim Kurtaj"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <span class="logo-fb">NK</span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home"      data-key="n_home">Ballina</a>
+      <a href="#gallery"   data-key="n_gal">Galeria</a>
+      <a href="#videos"    data-key="n_vid">Videot</a>
+      <a href="#about"     data-key="n_ab">Rreth Meje</a>
+      <a href="#instagram" data-key="n_ig">Instagram</a>
+      <a href="#contact"   data-key="n_ct">Kontakti</a>
+    </nav>
+    <div class="nav-ctrl">
+      <button class="ctrl-btn" id="lang-btn"><span id="lang-lbl">ENG</span></button>
+      <button class="ctrl-btn" id="theme-btn"><span id="theme-ico">☀</span></button>
+      <button class="hamburger" id="ham" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mob-menu" id="mob-menu">
+    <a href="#home"      data-key="n_home"   onclick="closeMob()">Ballina</a>
+    <a href="#gallery"   data-key="n_gal"    onclick="closeMob()">Galeria</a>
+    <a href="#videos"    data-key="n_vid"    onclick="closeMob()">Videot</a>
+    <a href="#about"     data-key="n_ab"     onclick="closeMob()">Rreth Meje</a>
+    <a href="#instagram" data-key="n_ig"     onclick="closeMob()">Instagram</a>
+    <a href="#contact"   data-key="n_ct"     onclick="closeMob()">Kontakti</a>
+  </div>
+</header>
+
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+
+  <!-- LEFT STRIP — scrolls top→bottom -->
+  <div class="hero-strip hero-strip-left" id="strip-left" aria-hidden="true">
+    <div class="strip-track" id="track-left"></div>
+  </div>
+
+  <!-- RIGHT STRIP — scrolls bottom→top -->
+  <div class="hero-strip hero-strip-right" id="strip-right" aria-hidden="true">
+    <div class="strip-track" id="track-right"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eye" data-key="h_eye">Fotograf — Kaçanik, Kosovë</p>
+    <h1 class="hero-name">Nderim<br>Kurtaj</h1>
+    <p class="hero-tag" data-key="h_tag">Çdo kornizë — një histori e përjetshme.</p>
+    <div class="hero-btns">
+      <a href="#gallery" class="btn-gold" data-key="h_b1">Shfleto Galerinë</a>
+      <a href="#contact" class="btn-line" data-key="h_b2">Na Kontaktoni</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span class="scroll-line"></span>
+    <span data-key="h_scroll">Zbulo</span>
+  </div>
+</section>
+
+
+<!-- ══════════════════ STATS ══════════════════ -->
+<div class="stats-strip">
+  <div class="stat rv"><div class="stat-n">200+</div><div class="stat-l" data-key="s1">Klientë të Lumtur</div></div>
+  <div class="stat rv"><div class="stat-n">5+</div><div class="stat-l" data-key="s2">Vite Përvojë</div></div>
+  <div class="stat rv"><div class="stat-n">10K+</div><div class="stat-l" data-key="s3">Momente të Fotografuara</div></div>
+</div>
+
+
+<!-- ══════════════════ GALLERY ══════════════════ -->
+<section id="gallery">
+  <div class="sec-wrap">
+    <div class="sec-header rv">
+      <span class="sec-eyebrow" data-key="g_eye">Galeria e Fotografive</span>
+      <h2 class="sec-title" data-key="g_title">Ku çdo moment bëhet<br><em>art i përjetshëm</em></h2>
+      <p class="sec-sub" data-key="g_sub">Secila fotografi mban brenda saj një emocion të vërtetë — gëzimin, lotët, buzëqeshjen e fshehtë. Fotografi nga historia juaj</p>
+    </div>
+
+    <div class="sliders-grid">
+
+      <!-- Frame 1 -->
+      <div class="slider-card rv" data-frame="1">
+        <div class="slider-img-area">
+          <div class="slider-track">
+            <img src="Fotot/Foto1_1.png" class="slide active" alt=""/>
+            <img src="Fotot/Foto1_2.png" class="slide" alt=""/>
+            <img src="Fotot/Foto1_3.png" class="slide" alt=""/>
+            <img src="Fotot/Foto1_4.png" class="slide" alt=""/>
+            <img src="Fotot/Foto1_5.png" class="slide" alt=""/>
+            <img src="Fotot/Foto1_6.png" class="slide" alt=""/>
+          </div>
+          <button class="sarr prev" onclick="mv(1,-1)">&#8249;</button>
+          <button class="sarr next" onclick="mv(1, 1)">&#8250;</button>
+          <div class="sdots" id="d1"></div>
+        </div>
+        <div class="slider-caption" data-key="cap1">Pak nga puna jonë për @nehatbulzaofficial / modele @elsaneziri.</div>
+      </div>
+
+      <!-- Frame 2 -->
+      <div class="slider-card rv" data-frame="2">
+        <div class="slider-img-area">
+          <div class="slider-track">
+            <img src="Fotot/Foto2_1.png" class="slide active" alt=""/>
+            <img src="Fotot/Foto2_2.png" class="slide" alt=""/>
+            <img src="Fotot/Foto2_3.png" class="slide" alt=""/>
+          </div>
+          <button class="sarr prev" onclick="mv(2,-1)">&#8249;</button>
+          <button class="sarr next" onclick="mv(2, 1)">&#8250;</button>
+          <div class="sdots" id="d2"></div>
+        </div>
+        <div class="slider-caption" data-key="cap2">Momente të bukura nga dasma e këtij qifti të lumtur.</div>
+      </div>
+
+      <!-- Frame 3 -->
+      <div class="slider-card rv" data-frame="3">
+        <div class="slider-img-area">
+          <div class="slider-track">
+            <img src="Fotot/Foto3_1.png" class="slide active" alt=""/>
+            <img src="Fotot/Foto3_2.png" class="slide" alt=""/>
+            <img src="Fotot/Foto3_3.png" class="slide" alt=""/>
+            <img src="Fotot/Foto3_4.png" class="slide" alt=""/>
+            <img src="Fotot/Foto3_5.png" class="slide" alt=""/>
+          </div>
+          <button class="sarr prev" onclick="mv(3,-1)">&#8249;</button>
+          <button class="sarr next" onclick="mv(3, 1)">&#8250;</button>
+          <div class="sdots" id="d3"></div>
+        </div>
+        <div class="slider-caption" data-key="cap3">Një gërshetim perfekt mes elegancës, stilit dhe emocioneve.</div>
+      </div>
+
+      <!-- Frame 4 -->
+      <div class="slider-card rv" data-frame="4">
+        <div class="slider-img-area">
+          <div class="slider-track">
+            <img src="Fotot/Foto4_1.png" class="slide active" alt=""/>
+            <img src="Fotot/Foto4_2.png" class="slide" alt=""/>
+            <img src="Fotot/Foto4_3.png" class="slide" alt=""/>
+            <img src="Fotot/Foto4_4.png" class="slide" alt=""/>
+            <img src="Fotot/Foto4_5.png" class="slide" alt=""/>
+          </div>
+          <button class="sarr prev" onclick="mv(4,-1)">&#8249;</button>
+          <button class="sarr next" onclick="mv(4, 1)">&#8250;</button>
+          <div class="sdots" id="d4"></div>
+        </div>
+        <div class="slider-caption" data-key="cap4">Momente magjike dhe emocione të pastërta.</div>
+      </div>
+
+      <!-- Frame 5 -->
+      <div class="slider-card rv" data-frame="5">
+        <div class="slider-img-area">
+          <div class="slider-track">
+            <img src="Fotot/Foto5_1.png" class="slide active" alt=""/>
+            <img src="Fotot/Foto5_2.png" class="slide" alt=""/>
+            <img src="Fotot/Foto5_3.png" class="slide" alt=""/>
+            <img src="Fotot/Foto5_4.png" class="slide" alt=""/>
+            <img src="Fotot/Foto5_5.png" class="slide" alt=""/>
+          </div>
+          <button class="sarr prev" onclick="mv(5,-1)">&#8249;</button>
+          <button class="sarr next" onclick="mv(5, 1)">&#8250;</button>
+          <div class="sdots" id="d5"></div>
+        </div>
+        <div class="slider-caption" data-key="cap5">Klas, madhështi dhe një dashuri që ndriqon fotografinë.</div>
+      </div>
+
+      <!-- Frame 6 -->
+      <div class="slider-card rv" data-frame="6">
+        <div class="slider-img-area">
+          <div class="slider-track">
+            <img src="Fotot/Foto6_1.png" class="slide active" alt=""/>
+            <img src="Fotot/Foto6_2.png" class="slide" alt=""/>
+            <img src="Fotot/Foto6_3.png" class="slide" alt=""/>
+          </div>
+          <button class="sarr prev" onclick="mv(6,-1)">&#8249;</button>
+          <button class="sarr next" onclick="mv(6, 1)">&#8250;</button>
+          <div class="sdots" id="d6"></div>
+        </div>
+        <div class="slider-caption" data-key="cap6">Një set fotografishë plot finesë dhe romancë.</div>
+      </div>
+
+    </div><!-- /sliders-grid -->
+
+    <div class="gallery-note rv">
+      <p data-key="g_note">Gjej edhe më shumë punë të mia në &nbsp;<a class="ig-link" href="https://www.instagram.com/nderim.kurtaj" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+    <div class="divider"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ VIDEOS ══════════════════ -->
+<section id="videos">
+  <div class="sec-wrap">
+    <div class="sec-header rv">
+      <span class="sec-eyebrow" data-key="v_eye">Punët në Video</span>
+      <h2 class="sec-title" data-key="v_title">Kamera që<br><em>tregon histori</em></h2>
+      <p class="sec-sub" data-key="v_sub">Filma dasmore dhe artistike me cilësi kinematografike — çdo kuadër tregon historinë tuaj unike.</p>
+    </div>
+    <div class="videos-list">
+      <button class="video-btn rv" onclick="openVid('Videot/Video1.mp4','Video 1')">
+        <span class="vnum">01</span>
+        <span class="vlbl" data-key="v1">Video 1 — Video Reklama për elektroprush - @elektroinstalues_prushi .</span>
+        <span class="vplay">▶</span>
+      </button>
+      <button class="video-btn rv" onclick="openVid('Videot/Video2.mp4','Video 2')">
+        <span class="vnum">02</span>
+        <span class="vlbl" data-key="v2">Video 2 — Dasma... Fillimi i një historie të pafundë.</span>
+        <span class="vplay">▶</span>
+      </button>
+      <button class="video-btn rv" onclick="openVid('Videot/Video3.mp4','Video 3')">
+        <span class="vnum">03</span>
+        <span class="vlbl" data-key="v3">Video 3 — Video Reklama per Restaurant Beg - @begrestaurant .</span>
+        <span class="vplay">▶</span>
+      </button>
+    </div>
+    <p class="vid-note rv" style="margin-top:2.5rem" data-key="v_note">
+      Njësoj si me fotot — gjej edhe më shumë punë të mia në &nbsp;<a class="ig-link" href="https://www.instagram.com/nderim.kurtaj" target="_blank" rel="noopener">Instagram</a>
+    </p>
+    <div class="divider"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ ABOUT ══════════════════ -->
+<section id="about">
+  <div class="sec-wrap">
+    <div class="about-grid">
+      <div class="rv">
+        <span class="sec-eyebrow" data-key="ab_eye">Rreth Meje</span>
+        <h2 class="about-h" data-key="ab_h">Pasioni im —<br><em>drita dhe momenti</em></h2>
+        <p class="about-p" data-key="ab_p1">Jam Nderim Kurtaj, fotograf dhe kinematograf me bazë në Kaçanik, fshati Doganaj. Specializohem në fotografi dasmorësh, portrete artistike dhe filma dasmorë me cilësi kinematografike.</p>
+        <p class="about-p" data-key="ab_p2">Besoj se çdo moment ka bukurinë e vet të veçantë — detyra ime është ta ngrij atë përjetësisht, duke ruajtur emocionet dhe detajet që e bëjnë atë moment të paharrueshëm.</p>
+        <p class="about-p" data-key="ab_p3">Me mbi 5 vite përvojë dhe sy të mprehtë për detaje, sjell çdo vizion të klientit në jetë me profesionalizëm, ngrohtësi dhe dashuri për artin.</p>
+        <div class="skills">
+          <span class="skill" data-key="sk1">Fotografi Dasmorësh</span>
+          <span class="skill" data-key="sk2">Portrete</span>
+          <span class="skill" data-key="sk3">Film Dasmorësh</span>
+          <span class="skill" data-key="sk4">Fotografi Artistike</span>
+          <span class="skill" data-key="sk5">Editim</span>
+          <span class="skill" data-key="sk6">Kinematografi</span>
+        </div>
+      </div>
+      <div class="portrait rv">
+        <img src="Fotot_Kryesore/logo.jpg" alt="Nderim Kurtaj" style="width:100%;height:100%;object-fit:contain;padding:2rem;background:var(--bg-card);"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="portrait-ph" style="display:none">NK</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ INSTAGRAM ══════════════════ -->
+<section id="instagram">
+  <div class="sec-wrap">
+    <div class="sec-header rv">
+      <span class="sec-eyebrow">Instagram</span>
+      <h2 class="sec-title" data-key="ig_title">Shiko punën<br><em>tonë të fundit</em></h2>
+    </div>
+    <div style="text-align:center;margin-top:1rem;" class="rv">
+      <a href="https://www.instagram.com/nderim.kurtaj" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.4rem;border-radius:8px;font-size:.82rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;transition:all var(--ease);text-decoration:none;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @nderim.kurtaj
+      </a>
+    </div>
+    <div class="divider"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ CONTACT ══════════════════ -->
+<section id="contact">
+  <div class="sec-wrap">
+    <div class="sec-header rv">
+      <span class="sec-eyebrow" data-key="ct_eye">Kontakti</span>
+      <h2 class="sec-title" data-key="ct_title">Le të punojmë<br><em>bashkë</em></h2>
+      <p class="sec-sub" data-key="ct_sub">Rezervoni seancën tuaj sot — dasma, portrete, projekte artistike.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- LEFT: 3 cards stacked -->
+      <div class="contact-cards-col">
+
+        <!-- Phone -->
+        <div class="c-card rv">
+          <div class="c-icon">📞</div>
+          <div class="c-title" data-key="ct_ph">Telefoni</div>
+          <div class="c-info">(+383) 49 598 899</div>
+          <div class="c-row">
+            <a href="https://wa.me/38349598899" target="_blank" rel="noopener" class="c-link">WhatsApp ↗</a>
+            <a href="viber://chat?number=%2B38349598899" class="c-link">Viber ↗</a>
+          </div>
+        </div>
+
+        <!-- Instagram -->
+        <div class="c-card rv">
+          <div class="c-icon">📸</div>
+          <div class="c-title">Instagram</div>
+          <div class="c-info">@nderim.kurtaj</div>
+          <div class="c-row">
+            <a href="https://www.instagram.com/nderim.kurtaj" target="_blank" rel="noopener" class="c-link" data-key="ct_ig">Hap Instagram ↗</a>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="c-card rv">
+          <div class="c-icon">📍</div>
+          <div class="c-title" data-key="ct_loc">Vendndodhja</div>
+          <div class="c-info">Rruga Ahmet Kaçiku<br>Fshati Doganaj, Kaçanik</div>
+          <div class="c-row">
+            <a href="https://maps.google.com/?q=Doganaj+Kacanik+Kosovo" target="_blank" rel="noopener" class="c-link" data-key="ct_map">Hap në Maps ↗</a>
+          </div>
+        </div>
+
+      </div><!-- /contact-cards-col -->
+
+      <!-- RIGHT: Contact Form -->
+      <div class="c-card cf-card rv">
+        <div class="cf-title" data-key="cf_title">Dërgoni një mesazh</div>
+        <div class="cf-sub" data-key="cf_sub">Plotësoni formularin dhe ne do t'ju kontaktojmë sa më shpejt.</div>
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label class="cf-label" for="cf-name" data-key="cf_name">Emri</label>
+            <input class="cf-input" id="cf-name" type="text" autocomplete="given-name" placeholder="Emri juaj"/>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="cf-surname" data-key="cf_surn">Mbiemri</label>
+            <input class="cf-input" id="cf-surname" type="text" autocomplete="family-name" placeholder="Mbiemri juaj"/>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="cf-phone" data-key="cf_tel">Nr. Telefonit</label>
+            <input class="cf-input" id="cf-phone" type="tel" autocomplete="tel" placeholder="+383 4X XXX XXX"/>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="cf-contact" data-key="cf_cont">Email (opsionale)</label>
+            <input class="cf-input" id="cf-contact" type="email" autocomplete="email" placeholder="email@shembull.com"/>
+          </div>
+          <div class="cf-field full">
+            <label class="cf-label" for="cf-msg" data-key="cf_msg">Mesazhi</label>
+            <textarea class="cf-textarea" id="cf-msg" data-key="cf_msg2" placeholder="Shkruani mesazhin tuaj këtu..."></textarea>
+          </div>
+        </div>
+        <button class="cf-send" id="cf-send-btn" data-key="cf_send">Dërgoni Mesazhin ↗</button>
+      </div>
+
+    </div><!-- /contact-layout -->
+
+    <!-- Map -->
+    <div class="map-box rv">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d500!2d21.186703926901068!3d42.27483527319809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ssq!2s!4v1700000000000"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Nderim Kurtaj — Doganaj, Kaçanik">
+      </iframe>
+      <div class="map-label">
+        📍 <strong>Rruga Ahmet Kaçiku, Fshati Doganaj, Kaçanik, Kosovë</strong>
+        &nbsp;·&nbsp; (+383) 49 598 899
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="site-footer">
+  <div class="foot-inner">
+    <div class="foot-top">
+
+      <!-- Brand col -->
+      <div class="foot-brand">
+        <div class="foot-brand-name">Nderim Kurtaj</div>
+        <div class="foot-brand-tag">Fotograf & Kinematograf<br>Kaçanik, Kosovë</div>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/nderim.kurtaj" target="_blank" rel="noopener" class="foot-social">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+          <a href="https://wa.me/38349598899" target="_blank" rel="noopener" class="foot-social">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="viber://chat?number=%2B38349598899" class="foot-social">Viber</a>
+        </div>
+      </div>
+
+      <!-- Navigation col -->
+      <div>
+        <div class="foot-col-title">Navigimi</div>
+        <div class="foot-col-links">
+          <a href="#home" data-key="n_home">Ballina</a>
+          <a href="#gallery" data-key="n_gal">Galeria</a>
+          <a href="#videos" data-key="n_vid">Videot</a>
+          <a href="#about" data-key="n_ab">Rreth Meje</a>
+          <a href="#instagram" data-key="n_ig">Instagram</a>
+          <a href="#contact" data-key="n_ct">Kontakti</a>
+        </div>
+      </div>
+
+      <!-- Services col -->
+      <div>
+        <div class="foot-col-title">Shërbimet</div>
+        <div class="foot-col-links">
+          <a href="#gallery">Fotografi Dasmorësh</a>
+          <a href="#gallery">Portrete Artistike</a>
+          <a href="#videos">Film Dasmorësh</a>
+          <a href="#gallery">Fotografi Artistike</a>
+          <a href="#videos">Video Reklamë</a>
+          <a href="#contact">Rezervo Tani</a>
+        </div>
+      </div>
+
+      <!-- Contact col -->
+      <div>
+        <div class="foot-col-title">Kontakti</div>
+        <div class="foot-contact-item">📞 <a href="tel:+38349598899">(+383) 49 598 899</a></div>
+        <div class="foot-contact-item">📍 Rruga Ahmet Kaçiku<br>&nbsp;&nbsp;&nbsp;&nbsp;Fshati Doganaj, Kaçanik</div>
+        <div class="foot-contact-item">📸 <a href="https://www.instagram.com/nderim.kurtaj" target="_blank" rel="noopener">@nderim.kurtaj</a></div>
+      </div>
+
+    </div><!-- /foot-top -->
+
+    <div class="foot-bottom">
+      <div class="foot-copy" data-key="ft_copy">© 2025 Nderim Kurtaj — Të gjitha të drejtat e rezervuara.</div>
+      <div class="foot-made">Fotografi & Kinematografi — Kaçanik, Kosovë</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════ VIDEO MODAL ══════════════════ -->
+<div class="modal-ov" id="vmodal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="modal-box">
+    <button class="modal-close" id="vclose" aria-label="Mbyll">&times;</button>
+    <div class="modal-title" id="vtitle">Video</div>
+    <div class="vid-wrap">
+      <video id="vplayer" controls playsinline>
+        <source id="vsrc" src="" type="video/mp4"/>
+        Shfletuesi juaj nuk mbështet videoformate HTML5.
+      </video>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ SEND POPUP ══════════════════ -->
+<div class="send-popup" id="send-popup" role="dialog" aria-modal="true">
+  <div class="sp-box">
+    <div class="sp-icon">📨</div>
+    <div class="sp-title" data-key="sp_title">Si dëshironi ta dërgoni?</div>
+    <div class="sp-sub" id="sp-preview">Zgjidhni platformën për të dërguar mesazhin tuaj.</div>
+    <div class="sp-btns">
+      <button class="sp-btn sp-wa" id="sp-wa-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-key="sp_wa">Dërgo me WhatsApp</span>
+      </button>
+      <button class="sp-btn sp-vb" id="sp-vb-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.398.002C8.638-.034 2.67.56.664 6.27c-.94 2.647-.944 6.196-.926 8.64.018 2.443.055 4.958.978 6.985.486 1.068 1.23 1.936 2.265 2.603.893.568 1.955.894 2.96.894H6l.032.003c1.344.27 2.025-1.04 2.025-1.04l1.535-3.38S9.82 19.81 8.9 19.5c-.92-.312-1.435-1.01-1.592-1.5-.157-.49-.188-1.012-.188-1.012s.019-.03.05-.056c-.013-.02-.012-.04.005-.055.056-.048.125-.04.125-.04S9.14 17.4 9.935 17.9c.796.5 1.72.568 2.435.222.715-.346 1.113-1.14 1.113-1.14l1.535-3.38s.685-1.514-.335-2.228c-.71-.5-1.375-.814-1.894-1.02A8.01 8.01 0 0011.4 9.88c-.457-.05-.898-.053-1.322-.012-1.325.126-2.42.762-3.185 1.762C6.13 12.63 5.9 13.9 5.9 13.9c-1.196-3.23-.618-7.57 2.098-9.97 1.624-1.43 3.75-2.056 5.84-1.93 2.09.128 4.043 1.042 5.494 2.566 1.45 1.524 2.276 3.54 2.287 5.632.011 2.092-.797 4.115-2.234 5.654-1.436 1.538-3.38 2.48-5.468 2.627-2.088.147-4.177-.52-5.795-1.866l.008.013s.023.023.025.042c.012.13-.068.25-.068.25L6.55 20.94s-.31 1.344.804 1.803c1.115.46 2.257-.167 2.257-.167l3.26-1.483.007-.004c.065-.034.13-.068.195-.098.065-.03.13-.056.194-.08.064-.024.128-.045.19-.065s.123-.036.183-.052c.24-.063.476-.106.71-.13.47-.049.93-.025 1.37.066.44.09.856.257 1.237.49 1.05.643 1.682 1.792 1.617 2.984L18.57 24c4.022-2.073 6.107-6.553 5.303-11.017C23.07 8.52 20.02 5.03 15.99 3.437a11.447 11.447 0 00-4.592-.835v-.6z"/></svg>
+        <span data-key="sp_vb">Dërgo me Viber</span>
+      </button>
+      <button class="sp-btn sp-cancel" id="sp-cancel-btn" data-key="sp_cancel">Anulo</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ JAVASCRIPT ══════════════════ -->
+<script src="script.js"></script>
+</body>
+</html>
