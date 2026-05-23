@@ -31,7 +31,7 @@ const LANG = {
     ct_eye:'Kontakti',ct_title:'Le të punojmë bashkë',ct_sub:'Rezervoni seancën tuaj sot — dasma, portrete, projekte artistike.',
     ct_ph:'Telefoni',ct_ig:'Hap Instagram ↗',ct_loc:'Vendndodhja',ct_map:'Hap në Maps ↗',
     cf_title:'Dërgoni një mesazh',cf_sub:'Plotësoni formularin dhe ne do t\'ju kontaktojmë sa më shpejt.',
-    cf_name:'Emri',cf_surn:'Mbiemri', cf_tel:'Nr. Telefoni', cf_cont:'Email (Opsionale)',cf_msg:'Mesazhi', cf_msg2:'Shkruani mesazhin tuaj këtu...', cf_send:'Dërgoni Mesazhin ↗',
+    cf_name:'Emri',cf_surn:'Mbiemri', cf_tel:'Nr. Telefoni', cf_cont:'Email (Opsionale)',cf_msg:'Mesazhi', cf_send:'Dërgoni Mesazhin ↗',
     sp_title:'Si dëshironi ta dërgoni?',sp_wa:'Dërgo me WhatsApp',sp_vb:'Dërgo me Viber',sp_cancel:'Anulo',
     ft_copy:'© 2025 — Të gjitha të drejtat e rezervuara.'
   },
@@ -64,7 +64,7 @@ const LANG = {
     ct_eye:'Contact',ct_title:"Let's work together",ct_sub:'Book your session today — weddings, portraits, artistic projects.',
     ct_ph:'Phone',ct_ig:'Open Instagram ↗',ct_loc:'Location',ct_map:'Open in Maps ↗',
     cf_title:'Send a message',cf_sub:'Fill in the form and we will get back to you as soon as possible.',
-    cf_name:'First name',cf_surn:'Last name', cf_tel:'Phone Number',cf_cont:'Email (Optional)',cf_msg:'Message', cf_msg2:'Enter your message here...',cf_send:'Send Message ↗',
+    cf_name:'First name',cf_surn:'Last name', cf_tel:'Phone Number',cf_cont:'Email (Optional)',cf_msg:'Message', cf_send:'Send Message ↗',
     sp_title:'How would you like to send it?',sp_wa:'Send via WhatsApp',sp_vb:'Send via Viber',sp_cancel:'Cancel',
     ft_copy:'© 2025 — All rights reserved.'
   }
